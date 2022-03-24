@@ -11,7 +11,12 @@
   margin-left: 2rem;
   color: #fff;
   transition-delay: 0.5s;
-  transition-property: border-bottom;
+  transition-property: border-left;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
+}
+.menuItem:hover,
+:active {
+  border-left: #fb3640;
+  cursor: pointer;
 }
