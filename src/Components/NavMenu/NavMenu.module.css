@@ -10,13 +10,12 @@
   display: inline-block;
   margin-left: 2rem;
   color: #fff;
-  transition-delay: 0.5s;
+  transition-delay: 0s;
   transition-property: border-left;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
 }
-.menuItem:hover,
-:active {
-  border-left: #fb3640;
+.menuItem:hover {
+  border-left: 2px solid #fb3640;
   cursor: pointer;
 }
