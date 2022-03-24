@@ -1,9 +1,13 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Quicksand:wght@400;600&display=swap");
+*,
+::after,
+::before {
   margin: 0;
-   padding:0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #f5f6fa;
+  font-family: "Poppins", sans-serif;
 }

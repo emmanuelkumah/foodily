@@ -1,0 +1,21 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: #1e212b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.navMenu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
