@@ -1,5 +1,20 @@
+.cart {
+  position: relative;
+  top: 10px;
+}
 .cartNotf {
-  background-color: #fb3640;
-  padding: 5px;
-  border-radius: 50%;
+  background: #eca400;
+  clip-path: circle(50%);
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.cartNotf p {
+  color: #1e212b;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-weight: 700;
 }

@@ -4,7 +4,7 @@ function NavMenu() {
   return (
     <>
       <div>
-        <h1 className={classes.navLogo}>Foodvry</h1>
+        <h1 className={classes.navLogo}>TastyBud</h1>
       </div>
       <ul className={classes.navMenu}>
         <li className={classes.menuItem}>Home</li>

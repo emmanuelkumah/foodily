@@ -8,33 +8,38 @@ function Hero() {
   return (
     <>
       <section className={classes.row}>
-        <section className={classes.column}>
-          <h1 className={classes.headline}>
-            Fastest <span className={classes.headlineSpn}>Delivery</span> &{" "}
-            <span className={classes.headlineSpn}>Easy Pick Up</span>
-          </h1>
-          <div className={classes.subHedlinDesc}>
-            <div className={classes.subText}>
-              <img src={chefImg} alt="chef" className={classes.imgChef} />
+        <div className={classes.column}>
+          <div className={classes.heading}>
+            <h1>
+              Order your{" "}
+              <span className={classes.headingColor}>favourite food</span> & get
+              it <span className={classes.headingColor}>delivered </span>swiftly
+            </h1>
+            <div className={classes.subHeading}>
+              <img
+                src={chefImg}
+                alt="chefImg"
+                className={classes.headingChefImg}
+              />
               <p>When you are too lazy to cook, we are just a click away!</p>
             </div>
-            <div>
-              <button className={classes.btnRest}>
-                <MdOutlineRestaurantMenu />
-                Find Restaurant
-              </button>
-              <button className={classes.btnOrder}>
-                <MdPlayCircleOutline />
-                How To Order
-              </button>
-            </div>
           </div>
-        </section>
-        <section className={classes.column}>
-          <div className={classes.imgSec}>
-            <img src={HeroImg} alt="heroImage" className={classes.heroImg} />
+          <div className={classes.btn}>
+            <button className={classes.btnFood}>
+              <MdOutlineRestaurantMenu />
+              Find Food
+            </button>
+            <button className={classes.btnOrder}>
+              <MdPlayCircleOutline />
+              How to order
+            </button>
           </div>
-        </section>
+        </div>
+        <div className={classes.column}>
+          <div>
+            <img src={HeroImg} alt="heroImg" className={classes.heroImg} />
+          </div>
+        </div>
       </section>
     </>
   );

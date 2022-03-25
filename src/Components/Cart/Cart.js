@@ -5,10 +5,12 @@ import classes from "./Cart.module.css";
 
 function Cart() {
   return (
-    <div>
+    <div className={classes.cart}>
       <IconContext.Provider value={{ color: "white" }}>
         <FaShoppingCart />
-        <span className={classes.cartNotf}>5</span>
+        <div className={classes.cartNotf}>
+          <p>5</p>
+        </div>
       </IconContext.Provider>
     </div>
   );

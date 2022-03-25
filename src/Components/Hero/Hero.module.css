@@ -3,78 +3,68 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  /* margin-left: 2rem;
+  margin-right: 2rem; */
 }
 .column {
   flex: 50%;
 }
-.headline {
-  font-family: "Quicksand", sans-serif;
-  font-size: 4rem;
+.heading {
+  margin-left: 3rem;
+}
+.heading h1 {
+  font-size: 3rem;
+  padding-top: 2.5rem;
+  padding-right: 2.5rem;
+  text-transform: capitalize;
+}
+.headingColor {
+  color: #eca400;
   font-weight: 700;
-  padding-top: 2rem;
-  padding-left: 3rem;
-  padding-right: 6rem;
 }
-.headlineSpn {
-  color: #ffb703;
-}
-.subHedlinDesc {
-  padding-top: 2rem;
-  padding-left: 3rem;
-}
-.subText {
+.subHeading {
   display: flex;
+  margin-top: 2rem;
 }
-.subText p {
-  font-size: 1.2rem;
-  /* border: 1px solid red; */
-  padding-top: 10px;
-  padding-right: 140px;
+.subHeading p {
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  background-color: #cdedf6;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-weight: 100;
 }
-.btnRest,
-.btnOrder {
-  outline: none;
+.headingChefImg {
+  display: inline-block;
+  width: 10%;
+}
+.btn {
+  margin-top: 2.5rem;
+  margin-left: 2.5rem;
+}
+button {
   border: none;
+  outline: none;
   border-radius: 20px;
+  font-size: 1.1rem;
   padding: 15px;
-  margin-top: 50px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
-.btnRest {
-  background-color: #ffafcc;
+.btnFood {
+  background-color: #6eeb83;
   margin-right: 40px;
 }
-.btnOrder:hover,
-:active {
-  background-color: #023047;
-  color: #fff;
+.btnFood:hover {
+  background-color: #cdedf6;
   cursor: pointer;
-  font-weight: 700;
 }
-.btnRest:hover,
-:active {
-  background-color: #ffb703;
-  /* cursor: pointer; */
-  font-weight: 700;
+.btnOrder:hover {
+  background-color: #eca400;
+  cursor: pointer;
 }
-/* CSS */
-
-.imgChef {
-  width: 10%;
-  margin-right: 20px;
-}
-.imgSec {
-  position: relative;
-}
-.abstImg {
-  /* border: 1px solid yellow; */
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  z-index: -2;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+.heroImg {
+  margin-top: 2rem;
+  width: 70%;
 }

@@ -16,6 +16,6 @@
   transition-timing-function: ease-out;
 }
 .menuItem:hover {
-  border-left: 2px solid #fb3640;
+  border-bottom: 2px solid #eca400;
   cursor: pointer;
 }
