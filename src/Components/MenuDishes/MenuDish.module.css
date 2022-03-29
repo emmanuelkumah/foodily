@@ -1,22 +1,54 @@
-.dishContainer {
+.mainMenuContainer {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
-.dishSecxn {
+.menuCards {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
 }
-.dishItem {
-  flex: 25%;
-  gap: 0px 20px;
-  background-color: white;
+.menuCardItem {
+  flex-basis: 23%;
+  margin: 12px;
   border-radius: 10px;
-  border: 1px solid red;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.dishDetls {
-  padding-right: 3rem;
+.menuCardItem h3 {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Quicksand", sans-serif;
 }
-.dishImg {
-  width: 350px;
-  height: 200px;
+.menuCardItem p {
+  font-weight: 200;
+  padding: 12px;
+  line-height: 1.5;
+}
+.menuAmt {
+  position: absolute;
+  top: 20px;
+  border-radius: 50%;
+  background-color: #ff4757;
+  color: #fff;
+  font-weight: 700;
+}
+.menuCardImg {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  height: 40%;
+  border-radius: 10px;
+}
+.btnOrder {
+  border: 0;
+  outline: none;
+  background-color: #eca400;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 12px;
 }

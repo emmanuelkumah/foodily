@@ -6,18 +6,22 @@ function MenuDish() {
   console.log(dishes);
   const menuItem = dishes.map(function (dish) {
     return (
-      <div className={classes.dishItem}>
-        <img src={dish.img} alt="dishes" className={classes.dishImg} />
+      <div className={classes.menuCardItem}>
+        <img src={dish.img} alt="dishes" className={classes.menuCardImg} />
         <h3>{dish.name}</h3>
-        <p>{dish.amount}</p>
-        <p className={classes.dishDetls}>{dish.desc}</p>
+        <p className={classes.menuAmt}>{`$${dish.amt}`}</p>
+        <p className={classes.menuCardDetls}>{`${dish.desc.slice(
+          0,
+          120
+        )}...`}</p>
+        <button className={classes.btnOrder}>Add To Cart</button>
       </div>
     );
   });
   return (
-    <section className={classes.dishContainer}>
+    <section className={classes.mainMenuContainer}>
       <h1>Best Selling Menus</h1>
-      <div className={classes.dishSecxn}>{menuItem}</div>
+      <div className={classes.menuCards}>{menuItem}</div>
     </section>
   );
 }
