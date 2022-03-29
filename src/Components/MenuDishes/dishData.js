@@ -1,0 +1,76 @@
+const dishes = [
+  {
+    id: 1,
+    name: "Sloopy joes",
+    desc:
+      "Give mince a makeover with this American-inspired favourite. Known as a ‘loose meat’ sandwich, this saucy, savoury filling can be adapted to your tastes",
+    amount: 50,
+    img: "https://source.unsplash.com/PxJ9zkM2wdA",
+  },
+  {
+    id: 2,
+    name: "Herby chicken pizza",
+    desc:
+      "Pack your pitta with peppers, chicken and tzatziki for a low-calorie lunch option. Plate up your chicken sandwich in 15 minutes and enjoy 3 of your 5-a-day",
+    amount: 35,
+    img: "https://source.unsplash.com/CbNAuxSZTFo",
+  },
+  {
+    id: 3,
+    name: "Pesto focaccia salads",
+    desc:
+      "The fillings for your sandwiches are baked into the bread here, making this an easy picnic option. To make it veggie, look for a vegetarian pesto",
+    amount: 33,
+    img: "https://source.unsplash.com/kcA-c3f_3FE",
+  },
+  {
+    id: 4,
+    name: "Grilled cheese sandwich",
+    desc:
+      "Take the cheese toastie to another level with this four-cheese grilled sandwich – a tasty mix of ricotta, parmesan, mozzarella and gorgonzola on white bread",
+    amount: 31,
+    img: "https://source.unsplash.com/_LGrizFCwqM",
+  },
+  {
+    id: 5,
+    name: "Sticky sausages baguettes",
+    desc:
+      "Jazz up your bangers with a sweet honey mustard and soy glaze and serve in a French stick sandwich with salad",
+    amount: 21,
+    img: "https://source.unsplash.com/m_N0Q_lwxZ0",
+  },
+  {
+    id: 6,
+    name: "chicken with wilted spinach",
+    desc:
+      "Enjoy this healthy chicken traybake with a speedy spinach side that's packed with iron. It's also low in fat and contains four of your 5-a-day",
+    amount: 45,
+    img: "https://source.unsplash.com/HQ22vVXhWcc",
+  },
+  {
+    id: 7,
+    name: "Roast chicken & spiced rice",
+    desc:
+      "Throw together this wholesome chicken traybake for the family, gently spiced using a little curry paste, with just 15 mins prep. Mango chutney adds a fruity tang",
+    amount: 66,
+    img: "https://source.unsplash.com/ND3edEmzcdQ",
+  },
+  {
+    id: 8,
+    name: "Winter Wishky sour",
+    desc:
+      "This classic bourbon cocktail takes a festive turn with a splash of orange juice and edible gold glitter - perfect for Christmas parties",
+    amount: 16,
+    img: "https://source.unsplash.com/8OpyEpJVgiQ",
+  },
+  {
+    id: 8,
+    name: "Winter Wishky sour",
+    desc:
+      "This classic bourbon cocktail takes a festive turn with a splash of orange juice and edible gold glitter - perfect for Christmas parties",
+    amount: 16,
+    img: "https://source.unsplash.com/8OpyEpJVgiQ",
+  },
+];
+
+export default dishes;

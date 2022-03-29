@@ -1,0 +1,22 @@
+.dishContainer {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.dishSecxn {
+  display: flex;
+  flex-wrap: wrap;
+}
+.dishItem {
+  flex: 25%;
+  gap: 0px 20px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid red;
+}
+.dishDetls {
+  padding-right: 3rem;
+}
+.dishImg {
+  width: 350px;
+  height: 200px;
+}
