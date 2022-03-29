@@ -4,11 +4,12 @@ import { BiDrink } from "react-icons/bi";
 import { CgBowl } from "react-icons/cg";
 
 const menuCategories = [
-  { item: "pizza", icon: <FaPizzaSlice /> },
-  { item: "Fried chicken", icon: <GiChickenOven /> },
-  { item: "Drinks", icon: <BiDrink /> },
-  { item: "Salad", icon: <GiFruitBowl /> },
-  { item: "Burger", icon: <GiHamburger /> },
-  { item: "Soups", icon: <CgBowl /> },
+  { id: 1, item: "pizza", icon: <FaPizzaSlice /> },
+  { id: 2, item: "Fried chicken", icon: <GiChickenOven /> },
+  { id: 3, item: "Drinks", icon: <BiDrink /> },
+  { id: 4, item: "Salad", icon: <GiFruitBowl /> },
+  { id: 5, item: "Burger", icon: <GiHamburger /> },
+  { id: 6, item: "Soups", icon: <CgBowl /> },
+  { id: 7, item: "Sandwich", icon: <GiHamburger /> },
 ];
 export default menuCategories;

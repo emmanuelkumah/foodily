@@ -1,31 +1,37 @@
-.categories {
+.menuCatg {
   padding-left: 2.5rem;
+  padding-right: 2.5rem;
   margin-top: 4rem;
+
   background-color: #eafdcf;
 }
-.heading,
-.subHeading {
+.catgHeading,
+.catgSubHead {
   text-align: center;
+  padding-top: 2rem;
 }
 ul {
   list-style-type: none;
 }
-.menuSec {
+.catgLists {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
-.menuCatDetls {
+.lists {
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
   background-color: white;
-  flex: 15%;
-  /* padding: 10px; */
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-right: 10px;
+  padding: 2rem;
   border-radius: 10px;
+  border: 1px dashed red;
+}
+
+.menuList {
+  text-align: center;
 }
 .chevLeft {
-  background-color: white;
+  background-color: #eca400;
   margin-right: 2rem;
 }
