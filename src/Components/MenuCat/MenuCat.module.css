@@ -1,0 +1,31 @@
+.categories {
+  padding-left: 2.5rem;
+  margin-top: 4rem;
+  background-color: #eafdcf;
+}
+.heading,
+.subHeading {
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
+.menuSec {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.menuCatDetls {
+  background-color: white;
+  flex: 15%;
+  /* padding: 10px; */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.chevLeft {
+  background-color: white;
+  margin-right: 2rem;
+}
