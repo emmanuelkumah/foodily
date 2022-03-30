@@ -1,0 +1,27 @@
+.subFooter--wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.col {
+  flex: 50%;
+}
+.footerHeading {
+  color: #eca400;
+}
+.restLoc {
+  outline: none;
+  width: 90%;
+  padding: 10px;
+  background-color: #ffffff;
+}
+.btn--go {
+  border-radius: 50%;
+  outline: none;
+  border: none;
+}
