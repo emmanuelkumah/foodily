@@ -1,54 +1,67 @@
 .mainMenuContainer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
+.menuHeading {
+  font-size: 2rem;
+  padding-left: 8px;
+  padding-bottom: 10px;
+  border-left: 2px solid #eca400;
+}
 .menuCards {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
 }
-.menuCardItem {
+.menuCard--item {
   flex-basis: 23%;
   margin: 12px;
+  position: relative;
+  padding-left: 8px;
+  padding-right: 8px;
   border-radius: 10px;
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.menuCardItem h3 {
-  text-align: center;
-  text-transform: capitalize;
-  font-family: "Quicksand", sans-serif;
-}
-.menuCardItem p {
-  font-weight: 200;
-  padding: 12px;
-  line-height: 1.5;
-}
-.menuAmt {
-  position: absolute;
-  top: 20px;
-  border-radius: 50%;
-  background-color: #ff4757;
-  color: #fff;
-  font-weight: 700;
-}
-.menuCardImg {
+.menuCard--cover img {
   display: block;
   margin: 20px auto;
   width: 90%;
   height: 40%;
   border-radius: 10px;
 }
-.btnOrder {
+.menuCard--content {
+  /* Take available height */
+  flex: 1;
+  padding: 10px;
+}
+.menuCard--content p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.menuCard--amt {
+  position: absolute;
+  top: 20px;
+  background: #eca400;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  clip-path: circle(50%);
+  height: 2em;
+  width: 2em;
+}
+
+.menuCard-btn {
   border: 0;
   outline: none;
   background-color: #eca400;
-  color: #fff;
+
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   padding: 10px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-radius: 5px;
   margin-top: 10px;
-  margin-left: 12px;
+  margin-bottom: 15px;
 }
