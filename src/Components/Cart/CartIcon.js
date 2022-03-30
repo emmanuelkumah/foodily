@@ -1,9 +1,9 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import classes from "./Cart.module.css";
+import classes from "./CartIcon.module.css";
 
-function Cart() {
+function CartIcon() {
   return (
     <div className={classes.cart}>
       <IconContext.Provider value={{ color: "white" }}>
@@ -16,4 +16,4 @@ function Cart() {
   );
 }
 
-export default Cart;
+export default CartIcon;

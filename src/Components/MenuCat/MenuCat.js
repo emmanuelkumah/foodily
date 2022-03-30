@@ -9,12 +9,12 @@ function MenuCat() {
   let catItems = menuCategories.slice(0, noItems);
 
   const menus = catItems.map((menu) => (
-    <div className={classes.lists}>
+    <div className={classes.lists} key={menu.id}>
       <IconContext.Provider value={{ size: "2.5rem" }}>
         {menu.icon}
       </IconContext.Provider>
       <ul>
-        <li key={menu.id}>{menu.item}</li>
+        <li>{menu.item}</li>
       </ul>
     </div>
   ));
