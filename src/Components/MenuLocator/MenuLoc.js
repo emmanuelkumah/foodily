@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./menuLoc.module.css";
 
-function menuLoc() {
+function MenuLoc() {
   return (
     <section className={classes["subFooter--wraper"]}>
       <div className={classes["col"]}>
@@ -17,4 +17,4 @@ function menuLoc() {
   );
 }
 
-export default menuLoc;
+export default MenuLoc;
