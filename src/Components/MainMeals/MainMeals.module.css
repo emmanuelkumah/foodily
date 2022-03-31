@@ -8,7 +8,7 @@
   font-size: 2rem;
   padding-left: 8px;
   padding-bottom: 10px;
-  border-left: 2px solid #eca400;
+  border-left: 2px solid #ffc800;
 }
 .mealCards {
   display: flex;
@@ -44,7 +44,7 @@
 .mealCard--amt {
   position: absolute;
   top: 20px;
-  background: #eca400;
+  background: #ffc800;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   clip-path: circle(50%);
@@ -55,7 +55,7 @@
 .mealCard-btn {
   border: 0;
   outline: none;
-  background-color: #eca400;
+  background-color: #ffc800;
 
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;

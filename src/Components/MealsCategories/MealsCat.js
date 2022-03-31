@@ -22,9 +22,9 @@ function MealsCat() {
 
   return (
     <section className={classes.menuCatg}>
-      <h2 className={classes.catgHeading}>Menu Categories</h2>
+      <h2 className={classes.catgHeading}>Meals Categories</h2>
       <p className={classes.catgSubHead}>
-        Wide variety of tasty menus to choose from{" "}
+        Wide variety of tasty meals to choose from{" "}
       </p>
       <IconContext.Provider value={{ size: "2rem", padding: "10px" }}>
         <BsChevronLeft className={classes.chevLeft} />

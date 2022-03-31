@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./mealsDel.module.css";
 import { GrMapLocation } from "react-icons/gr";
-import { IconContext } from "react-icons";
+import { IconContext } from "react-icons/lib";
 
 function MenuLoc() {
   return (

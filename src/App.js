@@ -4,6 +4,7 @@ import MealsCat from "./Components/MealsCategories/MealsCat";
 import MealsDelivery from "./Components/MealsDelivery/MealsDelivery";
 import NavBar from "./Components/NavBar/NavBar";
 import MainMeals from "./Components/MainMeals/MainMeals";
+import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
       </main>
       <footer>
         <MealsDelivery />
+        <Footer />
       </footer>
     </>
   );

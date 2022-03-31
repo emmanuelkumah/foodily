@@ -2,13 +2,15 @@
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   margin-top: 4rem;
-
   background-color: #eafdcf;
 }
-.catgHeading,
-.catgSubHead {
-  text-align: center;
+.catgHeading {
   padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.catgSubHead {
+  padding-bottom: 2rem;
+  /* text-align: center; */
 }
 ul {
   list-style-type: none;
@@ -25,13 +27,13 @@ ul {
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
-  border: 1px dashed red;
+  border: 1px dashed #ffc800;
 }
 
 .menuList {
   text-align: center;
 }
 .chevLeft {
-  background-color: #eca400;
+  background-color: #ffc800;
   margin-right: 2rem;
 }

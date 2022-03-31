@@ -19,3 +19,11 @@
   padding: 0;
   list-style-type: none;
 }
+.supportWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.phone {
+  color: #ffc800;
+}
