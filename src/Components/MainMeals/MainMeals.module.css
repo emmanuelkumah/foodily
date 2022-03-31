@@ -1,20 +1,20 @@
-.mainMenuContainer {
+.mainMealContainer {
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
-.menuHeading {
+.mealHeading {
   font-size: 2rem;
   padding-left: 8px;
   padding-bottom: 10px;
   border-left: 2px solid #eca400;
 }
-.menuCards {
+.mealCards {
   display: flex;
   flex-wrap: wrap;
 }
-.menuCard--item {
+.mealCard--item {
   flex-basis: 23%;
   margin: 12px;
   position: relative;
@@ -24,24 +24,24 @@
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.menuCard--cover img {
+.mealCard--cover img {
   display: block;
   margin: 20px auto;
   width: 90%;
   height: 40%;
   border-radius: 10px;
 }
-.menuCard--content {
+.mealCard--content {
   /* Take available height */
   flex: 1;
   padding: 10px;
 }
-.menuCard--content p {
+.mealCard--content p {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
-.menuCard--amt {
+.mealCard--amt {
   position: absolute;
   top: 20px;
   background: #eca400;
@@ -52,7 +52,7 @@
   width: 2em;
 }
 
-.menuCard-btn {
+.mealCard-btn {
   border: 0;
   outline: none;
   background-color: #eca400;

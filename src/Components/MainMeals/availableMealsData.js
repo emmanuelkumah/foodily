@@ -1,4 +1,4 @@
-const dishes = [
+const meals = [
   {
     id: 1,
     name: "Sloopy joes",
@@ -65,4 +65,4 @@ const dishes = [
   },
 ];
 
-export default dishes;
+export default meals;

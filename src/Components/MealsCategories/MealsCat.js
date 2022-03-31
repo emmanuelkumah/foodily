@@ -1,30 +1,24 @@
 import React from "react";
-import menuCategories from "./menuData";
-import classes from "./MenuCat.module.css";
+import mealsCategories from "./mealsCatData";
+import classes from "./MealsCat.module.css";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import { IconContext } from "react-icons";
 
-function MenuCat() {
+function MealsCat() {
   const noItems = 5;
-  let catItems = menuCategories.slice(0, noItems);
+  let catItems = mealsCategories.slice(0, noItems);
 
-  const menus = catItems.map((menu) => (
-    <div className={classes.lists} key={menu.id}>
+  const meals = catItems.map((mealCat) => (
+    <div className={classes.lists} key={mealCat.id}>
       <IconContext.Provider value={{ size: "2.5rem" }}>
-        {menu.icon}
+        {mealCat.icon}
       </IconContext.Provider>
       <ul>
-        <li>{menu.item}</li>
+        <li>{mealCat.item}</li>
       </ul>
     </div>
   ));
   //move to next category item
-  function nextCatItem() {
-    console.log("next item");
-    catItems.shift();
-    console.log(catItems);
-    //push next item
-  }
 
   return (
     <section className={classes.menuCatg}>
@@ -34,11 +28,11 @@ function MenuCat() {
       </p>
       <IconContext.Provider value={{ size: "2rem", padding: "10px" }}>
         <BsChevronLeft className={classes.chevLeft} />
-        <BsChevronRight onClick={nextCatItem} />
+        <BsChevronRight />
       </IconContext.Provider>
-      <section className={classes.catgLists}>{menus}</section>
+      <section className={classes.catgLists}>{meals}</section>
     </section>
   );
 }
 
-export default MenuCat;
+export default MealsCat;

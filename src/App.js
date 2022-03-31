@@ -1,9 +1,9 @@
 import React from "react";
 import Hero from "./Components/Hero/Hero";
-import MenuCat from "./Components/MenuCat/MenuCat";
-import MenuDish from "./Components/MenuDishes/MenuDish";
-import MenuLoc from "./Components/MenuLocator/MenuLoc";
+import MealsCat from "./Components/MealsCategories/MealsCat";
+import MealsDelivery from "./Components/MealsDelivery/MealsDelivery";
 import NavBar from "./Components/NavBar/NavBar";
+import MainMeals from "./Components/MainMeals/MainMeals";
 function App() {
   return (
     <>
@@ -12,11 +12,11 @@ function App() {
       </header>
       <main>
         <Hero />
-        <MenuCat />
-        <MenuDish />
+        <MealsCat />
+        <MainMeals />
       </main>
       <footer>
-        <MenuLoc />
+        <MealsDelivery />
       </footer>
     </>
   );

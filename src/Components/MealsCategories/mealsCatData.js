@@ -3,7 +3,7 @@ import { GiChickenOven, GiHamburger, GiFruitBowl } from "react-icons/gi";
 import { BiDrink } from "react-icons/bi";
 import { CgBowl } from "react-icons/cg";
 
-const menuCategories = [
+const mealsCategories = [
   { id: 1, item: "pizza", icon: <FaPizzaSlice /> },
   { id: 2, item: "Fried chicken", icon: <GiChickenOven /> },
   { id: 3, item: "Drinks", icon: <BiDrink /> },
@@ -12,4 +12,4 @@ const menuCategories = [
   { id: 6, item: "Soups", icon: <CgBowl /> },
   { id: 7, item: "Sandwich", icon: <GiHamburger /> },
 ];
-export default menuCategories;
+export default mealsCategories;

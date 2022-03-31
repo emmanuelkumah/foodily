@@ -1,0 +1,35 @@
+.mealsDelContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #ffc800;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.col {
+  flex: 50%;
+}
+.footerHeading {
+  color: #1e212b;
+  font-size: 2rem;
+  font-family: "Quicksand";
+  padding: 2rem;
+}
+input[type="text"] {
+  margin: 2rem;
+  width: 70%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.btnDel {
+  border-radius: 5px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background: #1e212b;
+  color: #fff;
+}
