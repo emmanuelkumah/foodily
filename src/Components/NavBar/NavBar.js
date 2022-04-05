@@ -4,6 +4,7 @@ import NavMenu from "../NavMenu/NavMenu";
 import Search from "../Search/Search";
 import CartIcon from "../Cart/CartIcon";
 import { BsHeadphones } from "react-icons/bs";
+import {GiHamburgerMenu} from "react-icons/gi"
 import { IconContext } from "react-icons/lib";
 
 function NavBar() {
@@ -17,9 +18,13 @@ function NavBar() {
           </IconContext.Provider>
           <p className={classes.phone}>+2332453235</p>
         </div>
-
+        <IconContext.Provider value={{ color: "white" }}>
+          <GiHamburgerMenu/>
+        </IconContext.Provider>
+        
         <CartIcon />
         <Search />
+
       </header>
     </>
   );
