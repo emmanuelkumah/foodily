@@ -18,3 +18,9 @@
   left: 10px;
   font-weight: 700;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .cart {
+    margin-top: 20px;
+  }
+}

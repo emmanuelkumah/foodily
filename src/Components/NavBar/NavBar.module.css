@@ -1,29 +1,58 @@
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  background-color: #1e212b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem 1rem 2rem;
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: #1e212b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
 
-  margin-left: 3.5rem;
-  margin-right: 3.5rem;
-  border-bottom-left-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
+  .navMenu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .iconContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .phone {
+    color: #ffc800;
+  }
 }
 
-.navMenu {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.supportWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.phone {
-  color: #ffc800;
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .nav {
+    background-color: #1e212b;
+    overflow: hidden;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    padding: 2rem;
+  }
+  .navLogo {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .menuIcon {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+  }
+  .menuItemContainer {
+    margin-top: 2rem;
+  }
+  .phoneNum {
+    color: #fff;
+  }
 }

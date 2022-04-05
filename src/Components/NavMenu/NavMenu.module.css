@@ -1,21 +1,30 @@
-.navMenu {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  .navMenu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .menuItem {
+    display: inline-block;
+    margin-left: 2rem;
+    color: #fff;
+    transition-delay: 0s;
+    transition-property: border-left;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
+  .menuItem:hover {
+    border-bottom: 2px solid #ffc800;
+    cursor: pointer;
+  }
+  /* Styles */
 }
-.navLogo {
-  color: #fff;
-}
-.menuItem {
-  display: inline-block;
-  margin-left: 2rem;
-  color: #fff;
-  transition-delay: 0s;
-  transition-property: border-left;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-}
-.menuItem:hover {
-  border-bottom: 2px solid #ffc800;
-  cursor: pointer;
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+  .menuItem {
+    color: #fff;
+  }
 }
