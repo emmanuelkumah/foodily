@@ -1,3 +1,24 @@
+.cart {
+  position: relative;
+  top: 10px;
+}
+.cartNotf {
+  background: #ffc800;
+  clip-path: circle(50%);
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.cartNotf p {
+  color: #1e212b;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-weight: 700;
+}
+
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   .navMenu {
@@ -16,8 +37,19 @@
     transition-timing-function: ease-out;
   }
   .menuItem:hover {
-    border-bottom: 2px solid #ffc800;
+    border-left: 5px solid #ffc800;
+    background-color: #d4e79e;
+    color: #1e212b;
     cursor: pointer;
+  }
+  .iconsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .phoneNum {
+    color: #ffc800;
+    margin-right: 3rem;
   }
   /* Styles */
 }
@@ -26,5 +58,11 @@
   /* Styles */
   .menuItem {
     color: #fff;
+  }
+  .navContainer {
+    display: none;
+  }
+  .searchIcon {
+    margin-top: 2rem;
   }
 }

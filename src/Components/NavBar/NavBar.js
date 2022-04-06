@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import classes from "./NavBar.module.css";
-import NavMenu from "../NavMenu/NavMenu";
-import Search from "../Search/Search";
-import CartIcon from "../Cart/CartIcon";
-import { BsHeadphones } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineCloseSquare } from "react-icons/ai";
+import { BsHeadphones } from "react-icons/bs";
+import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 
 function NavBar() {
@@ -23,34 +20,48 @@ function NavBar() {
             TastyPouch
           </a>
         </h1>
-        {showMenu && (
-          <div className={classes.menuItemContainer}>
-            <NavMenu className={classes.navMenu} />
-            <div className={classes.iconContainer}>
-              <IconContext.Provider value={{ color: "white" }}>
-                <BsHeadphones />{" "}
-                <span className={classes.phoneNum}>+2332453235</span>
-                <CartIcon />
-                <Search />
-              </IconContext.Provider>
+
+        <ul className={classes.navMenu}>
+          <li className={classes.menuItem}>Home</li>
+          <li className={classes.menuItem}>Services</li>
+          <li className={classes.menuItem}>Blog </li>
+        </ul>
+        <div className={classes.iconContainer}>
+          <IconContext.Provider value={{ color: "white" }}>
+            <div className={classes.phoneDetls}>
+              <BsHeadphones /> 02333323
             </div>
-          </div>
-        )}
-        {showHamburgerIcon ? (
-          <IconContext.Provider value={{ color: "white", size: "2rem" }}>
-            <GiHamburgerMenu
-              className={classes.menuIcon}
-              onClick={toggleMenu}
-            />
+            <div className={classes.cart}>
+              <FaShoppingCart />
+              <p className={classes.cartNotf}>5</p>
+            </div>
+
+            <FaSearch />
           </IconContext.Provider>
-        ) : (
-          <IconContext.Provider value={{ color: "white", size: "2rem" }}>
-            <AiOutlineCloseSquare
-              className={classes.menuIcon}
-              onClick={toggleMenu}
-            />
+        </div>
+
+        {/* <span>
+          <IconContext.Provider value={{ color: "white" }}>
+            <div className={classes.phoneNum}>
+              <BsHeadphones />
+              +233 23213332
+            </div>
+            <div className={classes.cart}>
+              <FaShoppingCart />
+              <div className={classes.cartNotf}>
+                <p>5</p>
+              </div>
+            </div>
           </IconContext.Provider>
-        )}
+
+          <IconContext.Provider value={{ color: "white" }}>
+            <FaSearch />
+          </IconContext.Provider>
+        </span> */}
+
+        <IconContext.Provider value={{ color: "white", size: "2rem" }}>
+          <GiHamburgerMenu className={classes.menuIcon} onClick={toggleMenu} />
+        </IconContext.Provider>
       </nav>
     </>
   );

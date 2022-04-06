@@ -1,3 +1,8 @@
+.navLogo {
+  color: #fff;
+  text-decoration: none;
+}
+
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   .nav {
@@ -14,19 +19,64 @@
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
   }
-
-  .navMenu {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  .menuItem {
+    display: inline-block;
+    margin-left: 2rem;
+    color: #fff;
+    transition-delay: 0s;
+    transition-property: border-left;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    padding: 10px;
+  }
+  .menuItem:hover {
+    border-left: 5px solid #ffc800;
+    background-color: #d4e79e;
+    color: #1e212b;
+    font-weight: 600;
+    cursor: pointer;
   }
   .iconContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
-  .phone {
+  .phoneDetls {
     color: #ffc800;
+    padding-right: 100px;
+  }
+  .phoneNum {
+    position: absolute;
+    right: 320px;
+    color: #ffc800;
+  }
+  .menuIcon {
+    display: none;
+  }
+  .cart {
+    position: relative;
+    top: 10px;
+    right: 340px;
+  }
+  .cartNotf {
+    background: #ffc800;
+    clip-path: circle(50%);
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-weight: 600;
+    padding-top: 5px;
+    padding-left: 10px;
+  }
+  .cartNotf p {
+    color: #1e212b;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-weight: 700;
   }
 }
 
@@ -38,9 +88,8 @@
     border-bottom-right-radius: 1.5rem;
     padding: 2rem;
   }
-  .navLogo {
-    color: #fff;
-    text-decoration: none;
+  .menuItem {
+    display: none;
   }
 
   .menuIcon {
@@ -54,5 +103,8 @@
   }
   .phoneNum {
     color: #fff;
+  }
+  .iconContainer {
+    display: none;
   }
 }
