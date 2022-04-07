@@ -5,10 +5,12 @@ import MealsDelivery from "./Components/MealsDelivery/MealsDelivery";
 import NavBar from "./Components/NavBar/NavBar";
 import MainMeals from "./Components/MainMeals/MainMeals";
 import Footer from "./Components/Footer/Footer";
+import { Cart } from "./Components/Cart/Cart";
 function App() {
   return (
     <>
       <header>
+        <Cart />
         <NavBar />
       </header>
       <main>
