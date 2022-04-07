@@ -2,7 +2,7 @@ import React from "react";
 import Modal from "../Modal/Modal";
 import classes from "./Cart.module.css";
 
-export const Cart = (props) => {
+export const Cart = ({ handleHideCart }) => {
   const cartItems = [
     { id: 1, name: "Cheese", amt: 50 },
     { id: 2, name: "Rice and chicken", amt: 150 },
@@ -16,14 +16,16 @@ export const Cart = (props) => {
     );
   });
   return (
-    <Modal>
+    <Modal handleHideCart={handleHideCart}>
       {items}
       <div className={classes.total}>
         <span>Total Amount</span>
         <span>500</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes["button--alt"]}>Cancel</button>
+        <button className={classes["button--alt"]} onClick={handleHideCart}>
+          Cancel
+        </button>
         <button className={classes.button}>Order</button>
       </div>
     </Modal>
