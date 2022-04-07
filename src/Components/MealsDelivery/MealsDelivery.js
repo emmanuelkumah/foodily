@@ -9,7 +9,7 @@ function MenuLoc() {
       <div className={classes.col}>
         <h4 className={classes.footerHeading}>
           Discover restuarants that deliver near you
-          <IconContext.Provider value={{ color: "white" }}>
+          <IconContext.Provider value={{ color: "white", size: "1.5rem" }}>
             <GrMapLocation />
           </IconContext.Provider>
         </h4>
@@ -21,12 +21,7 @@ function MenuLoc() {
           placeholder="Enter your location"
         />
 
-        <button className={classes.btnDel}>
-          Go{" "}
-          <IconContext.Provider value={{ color: "white" }}>
-            <GrMapLocation />
-          </IconContext.Provider>
-        </button>
+        <button className={classes.btnDel}>Go </button>
       </div>
     </section>
   );

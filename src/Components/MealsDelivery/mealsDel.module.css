@@ -3,8 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #ffc800;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding: 2rem;
   margin-top: 3rem;
 }
 .col {
@@ -18,17 +17,34 @@
 }
 input[type="text"] {
   margin: 2rem;
-  width: 70%;
+  width: 60%;
   outline: none;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 1rem;
+  font-size: 1.2rem;
 }
 .btnDel {
   border-radius: 5px;
-  padding: 10px;
+  padding: 1rem;
   outline: none;
   border: none;
   background: #1e212b;
   color: #fff;
+  width: 20%;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .col {
+    flex: 100%;
+  }
+  input[type="text"] {
+    width: 80%;
+    margin: 1rem;
+  }
+  .btnDel {
+    width: 70%;
+    margin-left: 2rem;
+  }
 }

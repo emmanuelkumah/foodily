@@ -65,3 +65,8 @@
   margin-top: 10px;
   margin-bottom: 15px;
 }
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .mealCard--item {
+    flex-basis: 100%;
+  }
+}
