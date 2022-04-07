@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import classes from "./NavBar.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineCloseSquare } from "react-icons/ai";
 import { BsHeadphones } from "react-icons/bs";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 
 function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
-  const [showHamburgerIcon, setShowHamburgerIcon] = useState(true);
+
   function toggleMenu() {
     setShowMenu(!showMenu);
-    setShowHamburgerIcon(!showHamburgerIcon);
   }
   return (
     <>
@@ -21,47 +21,51 @@ function NavBar() {
           </a>
         </h1>
 
-        <ul className={classes.navMenu}>
+        <ul
+          className={showMenu ? classes.navMenuVisible : classes.navMenuHidden}
+        >
           <li className={classes.menuItem}>Home</li>
           <li className={classes.menuItem}>Services</li>
           <li className={classes.menuItem}>Blog </li>
         </ul>
-        <div className={classes.iconContainer}>
+
+        <div
+          className={
+            showMenu
+              ? classes.iconContainerVisible
+              : classes.iconContainerHidden
+          }
+        >
           <IconContext.Provider value={{ color: "white" }}>
             <div className={classes.phoneDetls}>
-              <BsHeadphones /> 02333323
+              <p>
+                {" "}
+                <BsHeadphones />
+                +233 254 234
+              </p>
             </div>
             <div className={classes.cart}>
               <FaShoppingCart />
               <p className={classes.cartNotf}>5</p>
             </div>
-
-            <FaSearch />
+            <FaSearch className={classes.searchIcon} />
           </IconContext.Provider>
         </div>
-
-        {/* <span>
-          <IconContext.Provider value={{ color: "white" }}>
-            <div className={classes.phoneNum}>
-              <BsHeadphones />
-              +233 23213332
-            </div>
-            <div className={classes.cart}>
-              <FaShoppingCart />
-              <div className={classes.cartNotf}>
-                <p>5</p>
-              </div>
-            </div>
+        {showMenu ? (
+          <IconContext.Provider value={{ color: "white", size: "2rem" }}>
+            <AiOutlineCloseSquare
+              className={classes.menuIcon}
+              onClick={toggleMenu}
+            />
           </IconContext.Provider>
-
-          <IconContext.Provider value={{ color: "white" }}>
-            <FaSearch />
+        ) : (
+          <IconContext.Provider value={{ color: "white", size: "2rem" }}>
+            <GiHamburgerMenu
+              className={classes.menuIcon}
+              onClick={toggleMenu}
+            />
           </IconContext.Provider>
-        </span> */}
-
-        <IconContext.Provider value={{ color: "white", size: "2rem" }}>
-          <GiHamburgerMenu className={classes.menuIcon} onClick={toggleMenu} />
-        </IconContext.Provider>
+        )}
       </nav>
     </>
   );

@@ -2,6 +2,33 @@
   color: #fff;
   text-decoration: none;
 }
+.menuItem {
+  color: #fff;
+  transition-delay: 0s;
+  transition-property: border-left;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  padding: 10px;
+}
+.menuItem:hover {
+  border-left: 5px solid #ffc800;
+  background-color: #d4e79e;
+  color: #1e212b;
+  font-weight: 600;
+  cursor: pointer;
+}
+.cart {
+  position: relative;
+}
+.cartNotf {
+  background: #ffc800;
+  clip-path: circle(50%);
+  height: 2em;
+  width: 2em;
+  font-weight: 600;
+  padding-top: 5px;
+  padding-left: 10px;
+}
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
@@ -22,25 +49,15 @@
   .menuItem {
     display: inline-block;
     margin-left: 2rem;
-    color: #fff;
-    transition-delay: 0s;
-    transition-property: border-left;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
-    padding: 10px;
+    /*   */
   }
-  .menuItem:hover {
-    border-left: 5px solid #ffc800;
-    background-color: #d4e79e;
-    color: #1e212b;
-    font-weight: 600;
-    cursor: pointer;
+
+  .iconContainerVisible {
   }
-  .iconContainer {
+  .iconContainerHidden {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    position: relative;
   }
   .phoneDetls {
     color: #ffc800;
@@ -55,9 +72,7 @@
     display: none;
   }
   .cart {
-    position: relative;
-    top: 10px;
-    right: 340px;
+    right: 3rem;
   }
   .cartNotf {
     background: #ffc800;
@@ -71,6 +86,7 @@
     padding-top: 5px;
     padding-left: 10px;
   }
+
   .cartNotf p {
     color: #1e212b;
     position: absolute;
@@ -88,10 +104,16 @@
     border-bottom-right-radius: 1.5rem;
     padding: 2rem;
   }
-  .menuItem {
+  .navMenuVisible {
+    display: block;
+  }
+  .navMenuHidden {
     display: none;
   }
-
+  .menuItem {
+    display: block;
+    padding: 10px 0 10px 0;
+  }
   .menuIcon {
     display: block;
     position: absolute;
@@ -101,10 +123,25 @@
   .menuItemContainer {
     margin-top: 2rem;
   }
-  .phoneNum {
-    color: #fff;
+  .phoneDetls p {
+    color: #ffc800;
   }
-  .iconContainer {
+
+  .iconContainerVisible {
+    display: block;
+  }
+  .iconContainerHidden {
     display: none;
+  }
+  .cart {
+    margin-top: 2rem;
+  }
+  .cartNotf {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+  }
+  .searchIcon {
+    margin-top: 10px;
   }
 }
