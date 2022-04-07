@@ -6,7 +6,10 @@ import { BsCartCheck } from "react-icons/bs";
 function MainMeals() {
   const mealCardItem = meals.map(function (meal) {
     return (
-      <div key={meal.id} className={classes["mealCard--item"]}>
+      <div
+        key={meal.id}
+        className={`${classes["mealCard--item"]} ${classes["hvr-grow"]}`}
+      >
         <div className={classes["mealCard--cover"]}>
           <img src={meal.img} alt="mealCover" />
         </div>
@@ -24,7 +27,7 @@ function MainMeals() {
   return (
     <section className={classes.mainMealContainer}>
       <h3 className={classes.mealHeading}>Yummy Meals Everyday</h3>
-      <div className={classes.mealCards}>{mealCardItem}</div>
+      <div className={`${classes.mealCards}`}>{mealCardItem}</div>
     </section>
   );
 }
