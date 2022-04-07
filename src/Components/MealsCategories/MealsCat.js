@@ -5,7 +5,7 @@ import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import { IconContext } from "react-icons";
 
 function MealsCat() {
-  const noItems = 5;
+  const noItems = 6;
   let catItems = mealsCategories.slice(0, noItems);
 
   const meals = catItems.map((mealCat) => (
@@ -14,7 +14,7 @@ function MealsCat() {
         {mealCat.icon}
       </IconContext.Provider>
       <ul>
-        <li>{mealCat.item}</li>
+        <li className={classes.mealItem}>{mealCat.item}</li>
       </ul>
     </div>
   ));

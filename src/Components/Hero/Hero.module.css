@@ -7,9 +7,14 @@
 .column {
   flex: 50%;
 }
+.subHeading {
+  display: flex;
+}
 .heading {
   margin-left: 3rem;
+  margin-right: 3rem;
 }
+
 .heading h1 {
   font-size: 3rem;
   padding-top: 2.5rem;
@@ -20,15 +25,13 @@
   color: #ffc800;
   font-weight: 700;
 }
+
 .subHeading {
-  display: flex;
   margin-top: 2rem;
 }
 .subHeading p {
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-right: 20px;
-  background-color: #cdedf6;
+  padding: 10px;
+  background-color: #fffa65;
   border-radius: 10px;
   font-family: "Poppins";
   font-weight: 100;
@@ -70,4 +73,18 @@
 .heroImg {
   margin-top: 2rem;
   width: 70%;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .column {
+    flex: 100%;
+  }
+  .heroImg {
+    display: block;
+    margin: 40px auto;
+    width: 90%;
+  }
+  .headingChefImg {
+    width: 20%;
+  }
 }
