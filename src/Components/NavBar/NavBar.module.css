@@ -17,18 +17,6 @@
   font-weight: 600;
   cursor: pointer;
 }
-.cart {
-  position: relative;
-}
-.cartNotf {
-  background: #ffc800;
-  clip-path: circle(50%);
-  height: 2em;
-  width: 2em;
-  font-weight: 600;
-  padding-top: 5px;
-  padding-left: 10px;
-}
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
@@ -71,7 +59,7 @@
   .menuIcon {
     display: none;
   }
-  .cart {
+  /* .cart {
     right: 3rem;
   }
   .cartNotf {
@@ -93,7 +81,7 @@
     top: 5px;
     left: 10px;
     font-weight: 700;
-  }
+  } */
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -133,14 +121,7 @@
   .iconContainerHidden {
     display: none;
   }
-  .cart {
-    margin-top: 2rem;
-  }
-  .cartNotf {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-  }
+
   .searchIcon {
     margin-top: 10px;
   }

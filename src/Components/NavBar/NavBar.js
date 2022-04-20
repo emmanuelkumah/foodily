@@ -5,6 +5,7 @@ import { AiOutlineCloseSquare } from "react-icons/ai";
 import { BsHeadphones } from "react-icons/bs";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+import CartNotification from "../CartNotification/CartNotification";
 
 function NavBar({ handleShowCart }) {
   const [showMenu, setShowMenu] = useState(false);
@@ -44,10 +45,7 @@ function NavBar({ handleShowCart }) {
                 +233 254 234
               </p>
             </div>
-            <div className={classes.cart} onClick={handleShowCart}>
-              <FaShoppingCart />
-              <p className={classes.cartNotf}>5</p>
-            </div>
+            <CartNotification handleShowCart={handleShowCart} />
             <FaSearch className={classes.searchIcon} />
           </IconContext.Provider>
         </div>

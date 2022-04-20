@@ -6,6 +6,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import MainMeals from "./Components/MainMeals/MainMeals";
 import Footer from "./Components/Footer/Footer";
 import { Cart } from "./Components/Cart/Cart";
+import CartProvider from "./store/CartProvider";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -17,7 +18,7 @@ function App() {
     setShowCart(false);
   };
   return (
-    <>
+    <CartProvider>
       <header>
         {showCart && <Cart handleHideCart={handleHideCart} />}
         <NavBar handleShowCart={handleShowCart} />
@@ -31,7 +32,7 @@ function App() {
         <MealsDelivery />
         <Footer />
       </footer>
-    </>
+    </CartProvider>
   );
 }
 

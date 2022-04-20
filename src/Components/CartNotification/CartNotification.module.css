@@ -1,0 +1,39 @@
+.cart {
+  position: relative;
+}
+.cartNotf {
+  background: #ffc800;
+  clip-path: circle(50%);
+  height: 2em;
+  width: 2em;
+  font-weight: 600;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.cartNotf p {
+  color: #1e212b;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-weight: 700;
+}
+@media only screen and (min-width: 1224px) {
+  .cart {
+    top: 20px;
+    right: 60px;
+  }
+  .cartNotf {
+    position: absolute;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .cart {
+    margin-top: 2rem;
+  }
+  .cartNotf {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+  }
+}
