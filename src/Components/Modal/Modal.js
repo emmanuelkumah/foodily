@@ -14,6 +14,7 @@ const Overlay = ({ children }) => {
 };
 
 const portalElement = document.getElementById("overlay");
+
 const Modal = ({ handleHideCart, children }) => {
   return (
     <>

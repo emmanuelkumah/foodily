@@ -6,14 +6,17 @@ import CartContext from "../../store/cartContext";
 function CartNotification({ handleShowCart }) {
   const cartContxt = useContext(CartContext);
 
-  const noItemsInCart = cartContxt.items.reduce(
-    (acc, currntItem) => acc + currntItem.amount,
-    0
-  );
+  const itemsNo = cartContxt.items.length;
+
+  // const itemsInCart = cartContxt.items.reduce(
+  //   (acc, currntItem) => acc + currntItem.amount,
+  //   0
+  // );
+
   return (
     <div className={classes.cart} onClick={handleShowCart}>
       <FaShoppingCart />
-      <p className={classes.cartNotf}>{noItemsInCart}</p>
+      <p className={classes.cartNotf}>{itemsNo}</p>
     </div>
   );
 }
