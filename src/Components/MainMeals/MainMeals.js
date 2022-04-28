@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import meals from "./availableMealsData";
 import classes from "./MainMeals.module.css";
+<<<<<<< HEAD
 import { BsCartCheck } from "react-icons/bs";
 import CartContext from "../../store/cartContext";
 
@@ -29,12 +30,28 @@ function MainMeals() {
           </button>
         </div>
       </div>
+=======
+import SingleMeal from "./SingleMeal";
+
+function MainMeals() {
+  const mealLists = meals.map(function (meal) {
+    return (
+      <SingleMeal
+        id={meal.id}
+        img={meal.img}
+        name={meal.name}
+        desc={meal.desc}
+        amt={meal.amt}
+      />
+>>>>>>> SingleMeal
     );
   });
   return (
     <section className={classes.mainMealContainer}>
-      <h3 className={classes.mealHeading}>Yummy Meals Everyday</h3>
-      <div className={`${classes.mealCards}`}>{mealCardItem}</div>
+      <h3 className={classes.mealHeading}>Enjoy Yummy Meals Everyday</h3>
+      <div>
+        <ul className={classes.cards}>{mealLists}</ul>
+      </div>
     </section>
   );
 }
