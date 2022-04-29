@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { BsCartPlusFill } from "react-icons/bs";
+
 import Input from "./Input";
 import classes from "./Form.module.css";
 
-function Form({ id }) {
+function Form({ id, addItemToCart }) {
+  const [enteredQntyIsValid, setEnteredQntyIsValid] = useState(true);
+  const quantityInputRef = useRef();
+
+  const handleFormSubmission = (event) => {
+    event.preventDefault();
+    const enteredQnty = quantityInputRef.current.value;
+    const enteredQntyNum = +enteredQnty;
+    if (
+      enteredQnty.trim().length === 0 ||
+      enteredQntyNum < 1 ||
+      enteredQntyNum > 5
+    ) {
+      setEnteredQntyIsValid(false);
+      return;
+    }
+    addItemToCart(enteredQntyNum);
+  };
   return (
     <div>
-      <form className={classes.form}>
+      <form className={classes.form} onSubmit={handleFormSubmission}>
         <Input
+          ref={quantityInputRef}
           label="Quantity"
           input={{
             id: "quantity" + id,
@@ -17,6 +37,10 @@ function Form({ id }) {
             defaultValue: "1",
           }}
         />
+        {!enteredQntyIsValid && <p>Please enter a valid quantity(1-5)</p>}
+        <button className={classes.btnForm}>
+          <BsCartPlusFill /> Add
+        </button>
       </form>
     </div>
   );

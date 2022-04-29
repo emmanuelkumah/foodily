@@ -4,11 +4,14 @@ import classes from "./Cart.module.css";
 import CartContext from "../../store/cartContext";
 
 export const Cart = ({ handleHideCart }) => {
+  const cartContext = useContext(CartContext);
+
+  const totalAmount = cartContext.totalAmount;
   return (
     <Modal handleHideCart={handleHideCart}>
       <div className={classes.total}>
         <span>Total Amount</span>
-        <span>80</span>
+        <span>{totalAmount}</span>
       </div>
       <div className={classes.actions}>
         <button className={classes["button--alt"]} onClick={handleHideCart}>

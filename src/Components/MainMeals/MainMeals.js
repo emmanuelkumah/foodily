@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import meals from "./availableMealsData";
 import classes from "./MainMeals.module.css";
 import SingleMeal from "./SingleMeal";
@@ -7,6 +7,7 @@ function MainMeals() {
   const mealLists = meals.map(function (meal) {
     return (
       <SingleMeal
+        key={meal.id}
         id={meal.id}
         img={meal.img}
         name={meal.name}

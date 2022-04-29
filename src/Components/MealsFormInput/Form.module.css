@@ -2,3 +2,19 @@
   display: flex;
   padding: 10px;
 }
+.btnForm {
+  border: 0;
+  outline: none;
+  background-color: #ffc800;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: 10px;
+  font-size: 1rem;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 10px;
+}
+.btnForm:hover {
+  background-color: #83b692;
+  cursor: pointer;
+}

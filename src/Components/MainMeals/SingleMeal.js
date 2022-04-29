@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import Form from "../MealsFormInput/Form";
 import classes from "./SingleMeal.module.css";
+import CartContext from "../../store/cartContext";
 
 function SingleMeal({ id, name, img, amt, desc }) {
+  const cartContext = useContext(CartContext);
+
+  const addItemToCart = (qnty) => {
+    cartContext.addItem({
+      id: id,
+      name: name,
+      img: img,
+      amt: amt,
+      qnty: qnty,
+    });
+  };
   return (
     <div className={`${classes.cardItem} ${classes["hvr-grow"]}`}>
-      <li key={name}>
+      <li>
         <div>
           <div className={classes["cardItem--cover"]}>
             <img src={img} alt="mealCover" />
@@ -16,7 +28,7 @@ function SingleMeal({ id, name, img, amt, desc }) {
             <p className={classes["cardItem--amt"]}>{`₵ ${amt}`}</p>
           </div>
         </div>
-        <Form id={id} />
+        <Form id={id} addItemToCart={addItemToCart} />
       </li>
     </div>
   );
