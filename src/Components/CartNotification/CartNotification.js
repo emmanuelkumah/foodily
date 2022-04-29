@@ -4,19 +4,15 @@ import classes from "./CartNotification.module.css";
 import CartContext from "../../store/cartContext";
 
 function CartNotification({ handleShowCart }) {
-  const cartContxt = useContext(CartContext);
+  const [items] = useContext(CartContext);
 
-  const itemsNo = cartContxt.items.length;
-
-  // const itemsInCart = cartContxt.items.reduce(
-  //   (acc, currntItem) => acc + currntItem.amount,
-  //   0
-  // );
-
+  const itemsQnty = items.reduce((acc, currentItem) => {
+    return acc + currentItem.qnty;
+  }, 0);
   return (
     <div className={classes.cart} onClick={handleShowCart}>
       <FaShoppingCart />
-      <p className={classes.cartNotf}>{itemsNo}</p>
+      <p className={classes.cartNotf}>{itemsQnty}</p>
     </div>
   );
 }
