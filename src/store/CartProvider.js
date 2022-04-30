@@ -8,9 +8,9 @@ const defaultCartState = {
 
 const cartReducer = (state, action) => {
   if (action.type === "ADD_ITEM") {
-    // const updatedCartItems = [...state.items, action.item];
     const updatedTotalAmount =
       state.totalAmount + action.item.amt * action.item.qnty;
+    //check if item exists
     const indexOfExistingItem = state.items.findIndex(
       (item) => item.id === action.item.id
     );
@@ -20,14 +20,15 @@ const cartReducer = (state, action) => {
 
     let updatedCartItems;
     if (existingCartItem) {
-      const updatedItem = {
+      const updateItem = {
         ...existingCartItem,
-        amt: existingCartItem.amt + action.item.amt,
+        // amt: existingCartItem.amt + action.item.amt,
+        qnty: existingCartItem.qnty + action.item.qnty,
       };
       updatedCartItems = [...state.items];
       //update the item in cart
 
-      updatedCartItems[indexOfExistingItem] = updatedItem;
+      updatedCartItems[indexOfExistingItem] = updateItem;
     } else {
       updatedCartItems = [...state.items, action.item];
     }
@@ -37,6 +38,31 @@ const cartReducer = (state, action) => {
       totalAmount: updatedTotalAmount,
     };
   }
+  // remove item from cart
+  if (action.type === "REMOVE_ITEM") {
+    //findindex
+    const indexOfItemToRemove = state.items.findIndex(
+      (item) => item.id === action.id
+    );
+    const existingItem = state.items[indexOfItemToRemove];
+    //update total amount
+    const updatedTotalAmount = state.totalAmount - existingItem.amt;
+
+    let updatedCartItems;
+    if (existingItem.qnty === 1) {
+      updatedCartItems = state.items.filter((item) => item.id !== action.id);
+    } else {
+      const updateItem = { ...existingItem, qnty: existingItem.qnty - 1 };
+
+      updatedCartItems = [...state.items];
+      updatedCartItems[indexOfItemToRemove] = updateItem;
+    }
+    return {
+      items: updatedCartItems,
+      totalAmount: updatedTotalAmount,
+    };
+  }
+
   return defaultCartState;
 };
 
@@ -47,11 +73,10 @@ function CartProvider(props) {
   );
 
   const handleAddItem = (item) => {
-    console.log("item is ", item);
     dispatchAction({ type: "ADD_ITEM", item: item });
   };
   const handleRemoveItem = (id) => {
-    console.log(id);
+    dispatchAction({ type: "REMOVE_ITEM", id: id });
   };
 
   //context data

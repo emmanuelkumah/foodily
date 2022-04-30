@@ -7,8 +7,15 @@ import CartItem from "./CartItem";
 export const Cart = ({ handleHideCart }) => {
   const cartContext = useContext(CartContext);
 
-  const addItem = (item) => {};
-  const removeItem = (id) => {};
+  const isEmptyCart = cartContext.items.length === 0;
+  console.log("cart is empty", isEmptyCart);
+
+  const addItem = (item) => {
+    cartContext.addItem({ ...item, qnty: 1 });
+  };
+  const removeItem = (id) => {
+    cartContext.removeItem(id);
+  };
   const items = (
     <ul>
       {cartContext.items.map((item) => (
@@ -26,7 +33,8 @@ export const Cart = ({ handleHideCart }) => {
   const totalAmount = cartContext.totalAmount.toFixed(2);
   return (
     <Modal handleHideCart={handleHideCart}>
-      {items}
+      {isEmptyCart ? <h2>You have no meal in your cart </h2> : items}
+
       <div className={classes.total}>
         <span>Total Amount</span>
         <span>{`${totalAmount} GHS`}</span>
@@ -35,7 +43,7 @@ export const Cart = ({ handleHideCart }) => {
         <button className={classes["button--alt"]} onClick={handleHideCart}>
           Cancel
         </button>
-        <button className={classes.button}>Order</button>
+        {isEmptyCart ? "" : <button className={classes.button}>Order</button>}
       </div>
     </Modal>
   );
