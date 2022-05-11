@@ -23,6 +23,17 @@ export const Cart = ({ handleHideCart }) => {
     setIsCheckout(true);
   };
 
+  const handleSubmitOrder = (userData) => {
+    console.log(userData);
+    fetch("https://tastybud-40399-default-rtdb.firebaseio.com/orders.json", {
+      method: "POST",
+      body: JSON.stringify({
+        user: userData,
+        orderedItems: cartContext.items,
+      }),
+    });
+  };
+
   const actionBtns = (
     <div className={classes.actions}>
       <button className={classes["button--alt"]} onClick={handleHideCart}>
@@ -61,8 +72,13 @@ export const Cart = ({ handleHideCart }) => {
         <span>Total Amount</span>
         <span>{`${totalAmount} GHS`}</span>
       </div>
-      {isCheckout && <CheckoutForm handleHideCart={handleHideCart} />}
-      {!isCheckout && <actionBtns />}
+      {isCheckout && (
+        <CheckoutForm
+          handleHideCart={handleHideCart}
+          handleSubmitOrder={handleSubmitOrder}
+        />
+      )}
+      {!isCheckout && actionBtns}
     </Modal>
   );
 };

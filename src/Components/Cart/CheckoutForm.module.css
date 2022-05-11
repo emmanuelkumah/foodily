@@ -1,16 +1,16 @@
 .form {
   margin: 1rem 0;
-  height: 17rem;
+  height: 10rem;
   overflow: auto;
 }
 
 .control {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .control label {
   font-weight: bold;
-  margin-bottom: 0.25rem;
+  /* margin-bottom: 0.25rem; */
   display: block;
 }
 
