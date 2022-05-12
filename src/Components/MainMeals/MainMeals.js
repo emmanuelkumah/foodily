@@ -18,6 +18,7 @@ function MainMeals() {
     const responseData = await response.json();
 
     const getMeals = [];
+
     for (const [key, value] of Object.entries(responseData)) {
       getMeals.push({
         id: key,
@@ -28,6 +29,7 @@ function MainMeals() {
       });
     }
     setMeals(getMeals);
+    setIsLoading(false);
   };
 
   useEffect(() => {

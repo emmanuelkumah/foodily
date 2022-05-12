@@ -72,7 +72,7 @@ const CheckoutForm = ({ handleHideCart, handleSubmitOrder }) => {
       >
         <label htmlFor="street">Street</label>
         <input type="text" id="street" ref={streetInputRef} />
-        {!isValidInput.city && <p>Please enter the street</p>}
+        {!isValidInput.street && <p>Please enter the street</p>}
       </div>
       <div
         className={`${classes.control} ${

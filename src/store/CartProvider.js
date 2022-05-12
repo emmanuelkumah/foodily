@@ -22,7 +22,6 @@ const cartReducer = (state, action) => {
     if (existingCartItem) {
       const updateItem = {
         ...existingCartItem,
-        // amt: existingCartItem.amt + action.item.amt,
         qnty: existingCartItem.qnty + action.item.qnty,
       };
       updatedCartItems = [...state.items];
@@ -40,7 +39,6 @@ const cartReducer = (state, action) => {
   }
   // remove item from cart
   if (action.type === "REMOVE_ITEM") {
-    //findindex
     const indexOfItemToRemove = state.items.findIndex(
       (item) => item.id === action.id
     );
@@ -63,6 +61,11 @@ const cartReducer = (state, action) => {
     };
   }
 
+  //clear items in cart
+  if ((action.type = "Clear")) {
+    return defaultCartState;
+  }
+
   return defaultCartState;
 };
 
@@ -75,8 +78,13 @@ function CartProvider(props) {
   const handleAddItem = (item) => {
     dispatchAction({ type: "ADD_ITEM", item: item });
   };
+
   const handleRemoveItem = (id) => {
     dispatchAction({ type: "REMOVE_ITEM", id: id });
+  };
+
+  const handleClearItem = () => {
+    dispatchAction({ type: "Clear" });
   };
 
   //context data
@@ -85,6 +93,7 @@ function CartProvider(props) {
     totalAmount: cartItemsState.totalAmount,
     addItem: handleAddItem,
     removeItem: handleRemoveItem,
+    clearItem: handleClearItem,
   };
 
   return (

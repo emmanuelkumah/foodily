@@ -24,6 +24,14 @@ input[type="text"] {
   padding: 1rem;
   font-size: 1.2rem;
 }
+.invalidEmail {
+  padding-left: 2.5rem;
+  color: red;
+}
+
+.emailSubmitted {
+  padding-left: 2.5rem;
+}
 .btnDel {
   border-radius: 5px;
   padding: 1rem;
@@ -33,6 +41,11 @@ input[type="text"] {
   color: #fff;
   width: 20%;
   font-size: 1.2rem;
+}
+.btnDel:hover {
+  background: transparent;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 480px) {
